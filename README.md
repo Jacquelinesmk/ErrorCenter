@@ -30,3 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Projeto Final - Central de Erros
 ## Links de referência para a criação do front
 https://medium.com/trainingcenter/criando-uma-aplica%C3%A7%C3%A3o-internet-banking-com-angular-6-na-pr%C3%A1tica-e-sem-complica%C3%A7%C3%B5es-6fcbf98dcc12
+
+## Tabela de logs
+https://material.angular.io/components/table/examples
+https://material.angular.io/components/checkbox/api
+https://material.angular.io/components/sort/api
+https://material.angular.io/components/paginator/api

@@ -46,3 +46,19 @@ background-size: cover;
     color: #fff;
     border: 2px solid;
     }
+
+
+
+    /* Tabela */
+    table {
+      width: 100%;
+    }
+    
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+    
+    /*td, th {
+      width: 25%;
+    }*/
