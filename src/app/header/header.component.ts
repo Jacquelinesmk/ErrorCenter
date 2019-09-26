@@ -15,12 +15,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.formLogin = this.fb.group({
-      cpf: ['']
+      email: ['']
     });
   }
 
   gotoCadastroClientes() {
-    console.log("Oi");
     this.router.navigate(['/user-register']);
    }
 }

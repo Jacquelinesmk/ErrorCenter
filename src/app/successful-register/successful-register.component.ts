@@ -17,7 +17,7 @@ export class SuccessfulRegisterComponent implements OnInit {
   navegarParaLoginAutomaticamente() {
     setTimeout(() => {
       this.router.navigate(['/login']);
-    }, 10000);
+    }, 1000);
   }
 
   navegarParaLogin() {

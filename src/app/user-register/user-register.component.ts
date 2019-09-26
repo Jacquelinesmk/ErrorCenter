@@ -21,10 +21,8 @@ export class UserRegisterComponent implements OnInit {
     localStorage.clear();
     this.formCadastro = this.fb.group({
       nome: [''],
-      cpf: [],
       email: [],
-      telefone: [],
-      endereco: []
+      password: []
     });
 
     this.formCadastro.valueChanges.pipe(

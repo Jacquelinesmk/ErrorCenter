@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.formLogin = this.fb.group({
-      cpf: ['']
+      email: ['']
     });
   }
 
@@ -45,13 +45,13 @@ export class LoginComponent implements OnInit {
     this.getCadastro = JSON.parse(localStorage.getItem('cadastro'));
     console.log("this.getCadastro");
     console.log(this.getCadastro);
-    const cpfPersistido = this.getCadastro['cpf'];
-    console.log("cpfPersistido");
-    console.log(typeof(cpfPersistido));
-    const cpfDigitado = this.formLogin.get('cpf').value;
-    console.log("cpfDigitado");
-    console.log(typeof(cpfDigitado));
-    if (cpfPersistido == cpfDigitado) {
+    const emailPersistido = this.getCadastro['email'];
+    console.log("emailPersistido");
+    console.log(typeof(emailPersistido));
+    const emailDigitado = this.formLogin.get('email').value;
+    console.log("emailDigitado");
+    console.log(typeof(emailDigitado));
+    if (emailPersistido == emailDigitado) {
       console.log("São iguais");
       this.router.navigate(['/user-home']);
     } else {
