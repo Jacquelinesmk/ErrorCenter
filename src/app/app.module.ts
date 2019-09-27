@@ -11,6 +11,10 @@ import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { SuccessfulRegisterComponent } from './successful-register/successful-register.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { ModalNotRegisteredComponent } from './modal-not-registered/modal-not-registered.component';
+import { ErrorViewComponent } from './error-view/error-view.component';
 
 
 @NgModule({
@@ -35,7 +40,8 @@ import { ModalNotRegisteredComponent } from './modal-not-registered/modal-not-re
     LoginComponent,
     SuccessfulRegisterComponent,
     AccessDeniedComponent,
-    ModalNotRegisteredComponent
+    ModalNotRegisteredComponent,
+    ErrorViewComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,10 @@ import { ModalNotRegisteredComponent } from './modal-not-registered/modal-not-re
     MatTableModule,
     MatCheckboxModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule
     
   ],
   providers: [AuthGuard, AuthService],

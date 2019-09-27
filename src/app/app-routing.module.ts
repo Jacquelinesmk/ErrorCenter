@@ -10,9 +10,11 @@ import { UserHomeComponent } from './user-home/user-home.component';
 
 
 const routes: Routes = [
-  { path: '', component: ContentComponent },
+  { path: '', component: LoginComponent },
   { path: 'user-register', component: UserRegisterComponent },
   { path: 'succesful-register', component: SuccessfulRegisterComponent },
+  { path: 'home', component: ContentComponent },
+  { path: 'error-view', component: ContentComponent },
   { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
   { path: 'access-denied', component: AccessDeniedComponent },
   { path: 'login', component: LoginComponent },

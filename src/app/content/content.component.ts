@@ -35,7 +35,10 @@ const ELEMENT_DATA: UserData[] = [
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  // ----- Select Forms -----
+  selectedAmb = 'producao';
 
+  // ----- Tabela -----
   displayedColumns: string[] = ['select', 'id', 'level', 'log', 'evento'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
@@ -63,8 +66,6 @@ export class ContentComponent implements OnInit {
   gotoCadastroClientes() {
     this.router.navigate(['/user-register']);
   }
-
-
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
