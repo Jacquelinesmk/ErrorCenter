@@ -12,6 +12,15 @@ export interface UserData {
   evento: string;
 }
 
+export interface ResponseBody{
+  dataHora: Date;
+  ipOrigem: string,
+  titulo: string;
+  detalhes: string;
+  eventos: number;
+  coletadoToken: string;
+}
+
 /** Constants used to fill up our data base. */
 const EVENTOS: string[] = [
   '1000', '300', '100', '11', '2'

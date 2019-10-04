@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { ErrorViewComponent } from './error-view/error-view.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'user-register', component: UserRegisterComponent },
   { path: 'succesful-register', component: SuccessfulRegisterComponent },
   { path: 'home', component: ContentComponent },
-  { path: 'error-view', component: ContentComponent },
+  { path: 'error-view', component: ErrorViewComponent },
   { path: 'user-home', component: UserHomeComponent, canActivate: [AuthGuard] },
   { path: 'access-denied', component: AccessDeniedComponent },
   { path: 'login', component: LoginComponent },
