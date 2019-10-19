@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.formLogin = this.fb.group({
-      email: ['']
+      email: [''],
+      senha: []
     });
   }
 

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-register',
@@ -15,13 +17,13 @@ export class UserRegisterComponent implements OnInit {
   valoresForm: Object;
   conversao;
 
-  constructor(private fb: FormBuilder, public dialog: MatDialog, private router: Router) { }
+  constructor(private fb: FormBuilder, public dialog: MatDialog, private router: Router, private userService: UserService) { }
 
   ngOnInit() {
-    localStorage.clear();
+    //localStorage.clear();
     this.formCadastro = this.fb.group({
-      nome: [''],
-      email: [],
+      //nome: [''],
+      login: [],
       password: []
     });
 
@@ -32,26 +34,35 @@ export class UserRegisterComponent implements OnInit {
         this.valoresForm = res;
       });
 
+      //this.userService.getUsers().subscribe(users => {
+      //  console.log(users);
+      //});
   }
 
   cadastro() {
+    console.log("this.formCadastro.value");
     console.log(this.formCadastro.value);
     this.conversao = JSON.stringify(this.valoresForm);
+    console.log("this.conversao");
     console.log(this.conversao);
-    localStorage.setItem('cadastro', this.conversao);
+    //localStorage.setItem('cadastro', this.conversao);
 
+
+    this.userService.postUsers(this.formCadastro.value).subscribe(users => console.log(users));
+    
     this.verificaCadastro();
   }
 
   verificaCadastro() {
-    setTimeout(() => {
-      if (localStorage.getItem('cadastro')) {
+    //setTimeout(() => {
+      //console.log(localStorage.getItem('cadastro'));
+      //if (localStorage.getItem('cadastro')) {
         // TODO REDIRECIIONAR PARA PAGINA DE CADASTRO CONCLUIDO
         this.router.navigate(['/succesful-register']);
-      } else {
-        return false;
-      }
-    }, 200);
+      //} else {
+      //  return false;
+      //}
+    //}, 200);
   }
 
 }
