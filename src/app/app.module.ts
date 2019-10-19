@@ -27,6 +27,7 @@ import { SuccessfulRegisterComponent } from './successful-register/successful-re
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { ModalNotRegisteredComponent } from './modal-not-registered/modal-not-registered.component';
 import { ErrorViewComponent } from './error-view/error-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { ErrorViewComponent } from './error-view/error-view.component';
     MatSortModule,
     MatButtonModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
     
   ],
   providers: [AuthGuard, AuthService],
